@@ -1,0 +1,8 @@
+sources:
+  - name: demo
+    database: demo
+    schema: DBT_VINAY1517
+    tables:
+      - name: weather
+      - name: weather_table
+      
