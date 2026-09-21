@@ -1,6 +1,7 @@
 with daily_weather as (
 
     select date(time) as daily_weather,
+    time,
     cityname,
     weather_main, 
     pressere,
@@ -8,7 +9,9 @@ with daily_weather as (
     clouds
 
     
-    from  {{ source('DEMO', 'WEATHER') }} 
+  --   from  {{ source('DEMO', 'WEATHER') }} 
+  from {{ref ('stage_weather') }}
+
 
 ),
 

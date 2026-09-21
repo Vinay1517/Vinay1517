@@ -4,7 +4,8 @@ with TRIP as (
     cityname
     
     
-    from  {{ source('DEMO', 'WEATHER') }} 
+    --from  {{ source('DEMO', 'WEATHER') }} 
+     from {{ref ('stage_weather') }}
 
 )
 
